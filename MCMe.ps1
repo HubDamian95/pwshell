@@ -13,7 +13,7 @@ write-host ""
 write-host " Available commands are as followed" -ForegroundColor Blue
 write-host ""
 write-host "|--|ct365 - Connect to 365 (Exchange)"
-write-host "|--|ctleavers - Connect to Security And Compliance Centre"
+write-host "|--|ctSecCompliance - Connect to Security And Compliance Centre"
 write-host ""
 write-host ""
 write-host "**|**singleMailbox - Returns details of a mailbox"
@@ -39,7 +39,7 @@ write-host "Enjoy managing 365 in much easier way! ;) ;) ;) ;) ;) ;) " -Foregrou
 #Current Modules
 #!<-- The current functions within this module are as below:
 # - ct365 - Connect to 365 (Exchange)
-# - ctleavers - Connect to Security And Compliance Centre
+# - ctSecCompliance - Connect to Security And Compliance Centre
 
 #<!-Mailbox-!>
 
@@ -64,7 +64,7 @@ $uname = whoami /upn
 }
 
 #Connects you with Compliance Search
-function ctLeavers{
+function ctSecCompliance{
 $uname = whoami /upn
 	Connect-IPPSSession -UserPrincipalName $uname
 }
@@ -88,7 +88,7 @@ $Button2_Click =
 {
 [System.Windows.Forms.MessageBox]::Show("Connecting to Compliance Center, please enter your 2FA Code" , "2FA Authenticator")
 $form.hide()
-ctleavers
+ctSecCompliance
 $form.show()
 [System.Windows.Forms.MessageBox]::Show("Connected" , "2FA Authenticator")
 }
