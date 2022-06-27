@@ -23,7 +23,7 @@ $exampleResult = Invoke-RestMethod -Headers @{Authorization = "Bearer $($token)"
 $exampleResult | Out-File c:\temp\list.csv
 $result = Import-Csv c:\temp\list.csv
 
-$readyresult = $result | Where-Object {$_.'ColumnName' -like '<filterCriteriaYourelookingfor>'}
+#$readyresult = $result | Where-Object {$_.'ColumnName' -like '<filterCriteriaYourelookingfor>'}
 $captureResult = $readyUsers | Out-String
 
 $body = "Example Line 1"
