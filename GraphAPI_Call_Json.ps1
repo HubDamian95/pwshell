@@ -1,4 +1,4 @@
-$getlastDaysDate = (Get-Date).AddDays(-1).ToString("yyyy-MM-dd")
+#$getlastDaysDate = (Get-Date).AddDays(-1).ToString("yyyy-MM-dd")
 
 $ApplicationID = "<Application ID>"
 $TenatDomainName = "<TenantDomainName>"
